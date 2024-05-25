@@ -1,0 +1,42 @@
+[Desktop Entry]
+DefaultProfile=Profile 1.profile
+
+[General]
+ConfigVersion=1
+
+[KFileDialog Settings]
+Recent Files[$e]=wallpaperflare.com_wallpaper.jpg,file:$HOME/Downloads/wallpaper/spiderboi.jpg,file:$HOME/Downloads/wallpaper/legolas.jpg,file:$HOME/Downloads/wallpaper/onering.jpg,file:$HOME/Downloads/wallpaper/gray.jpg,file:$HOME/Downloads/wallpaper/lofinight.jpg,file:$HOME/Downloads/wallpaper/Pines.jpg,file:$HOME/Downloads/wallpaper/16Unitsu.jpg,file:$HOME/Downloads/wallpaper/cigs.jpg,file:$HOME/Downloads/wallpaper/14dusk.png,file:$HOME/Downloads/wallpaper/lofiCIty.jpg,file:$HOME/Downloads/wallpaper/lofiDaze.jpg,file:$HOME/Downloads/wallpaper/catlofi.png,file:$HOME/Downloads/wallpaper/9Gandalf.jpg,file:$HOME/Downloads/wallpaper/lofi3.jpg
+Recent URLs[$e]=file:$HOME/Wallpapers/,file:$HOME/.config/nvim/,file:$HOME/,file:$HOME/Documents/,file:$HOME/Downloads/,file:$HOME/Downloads/wallpaper/
+detailViewIconSize=64
+
+[MainWindow]
+1280x720 screen: Window-Maximized=true
+1440x810 screen: Height=738
+1440x810 screen: Width=1440
+1600x900 screen: Height=828
+1600x900 screen: Width=1600
+1680x1050 screen: Height=978
+1680x1050 screen: Width=1680
+1920x1080 screen: Height=1080
+1920x1080 screen: Width=1920
+1920x1080 screen: Window-Maximized=true
+1920x1080 screen: XPosition=0
+1920x1080 screen: YPosition=0
+320x180 screen: Window-Maximized=true
+800x600 screen: Height=528
+800x600 screen: Width=800
+800x600 screen: Window-Maximized=true
+800x600 screen: XPosition=0
+800x600 screen: YPosition=31
+:0.0=:0.0
+HDMI-1=HDMI-1
+MenuBar=Disabled
+State=AAAA/wAAAAD9AAAAAQAAAAAAAAEcAAACovwCAAAAAvsAAAAiAFEAdQBpAGMAawBDAG8AbQBtAGEAbgBkAHMARABvAGMAawAAAAAgAAACogAAAXQBAAAH+wAAABwAUwBTAEgATQBhAG4AYQBnAGUAcgBEAG8AYwBrAAAAAAD/////AAABGgEAAAcAAARbAAACwgAAAAQAAAAEAAAACAAAAAj8AAAAAQAAAAIAAAACAAAAFgBtAGEAaQBuAFQAbwBvAGwAQgBhAHIAAAAAAP////8AAAAAAAAAAAAAABwAcwBlAHMAcwBpAG8AbgBUAG8AbwBsAGIAYQByAAAAAAD/////AAAAAAAAAAA=
+eDP-1=eDP-1
+eDP-1 Height 1920x1080 eDP-1=554
+eDP-1 Width 1920x1080 eDP-1=887
+eDP-1 XPosition 1920x1080 eDP-1=1009
+eDP-1 YPosition 1920x1080 eDP-1=276
+
+[UiSettings]
+ColorScheme=
