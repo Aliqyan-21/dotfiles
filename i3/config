@@ -28,7 +28,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock -- /home/aliqyanabid/.config/i3/scripts/lock.sh --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
@@ -55,7 +55,7 @@ bindsym $mod+Return exec konsole
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec --no-startup-id dmenu_run
+bindsym $mod+d exec rofi -show run
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
@@ -189,4 +189,13 @@ bar {
         status_command i3status -c /home/aliqyanabid/.config/i3status/i3status.conf
 }
 
-bindsym $mod+x exec i3lock
+bindsym $mod+x exec /home/aliqyanabid/.config/i3/scripts/lock.sh
+
+#hide window title bar
+default_border pixel 1
+default_floating_border pixel 1
+
+# increase screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 1 
+# decrease screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 1 
