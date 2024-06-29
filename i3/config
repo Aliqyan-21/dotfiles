@@ -15,6 +15,9 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:monospace 10
 
+# Speed keyboard
+exec_always --no-startup-id xset r rate 250 40
+
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
@@ -28,11 +31,23 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock -- i3lock --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock ~/.config/i3/scripts/lock.sh --nofork
 
 # NetworkManager is the most popular way to manage wireless networks on Linux,
 # and nm-applet is a desktop environment-independent system tray GUI for it.
 exec --no-startup-id nm-applet
+
+# Enable touchpad tap to click
+exec_always xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
+
+# Enable natural scrolling
+exec_always xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
+
+# Brightness Control
+# increase screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id light -A 1 
+# decrease screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id light -U 1 
 
 # Use pactl to adjust volume in PulseAudio.
 set $refresh_i3status killall -SIGUSR1 i3status
@@ -43,10 +58,6 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
-
-# move tiling windows via drag & drop by left-clicking into the title bar,
-# or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec konsole
