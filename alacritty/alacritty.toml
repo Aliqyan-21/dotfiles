@@ -1,0 +1,47 @@
+import = [
+  "~/.config/alacritty/colors.toml"
+]
+
+live_config_reload = true
+
+[shell]
+program = "/usr/bin/fish"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 16.0
+offset = {x=0, y=10}
+
+[font.bold]
+family = "JetBrainsMonoNL NF Light"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMonoNL NF Light"
+style = "Bold Italic"
+
+[font.italic]
+family = "JetBrainsMonoNL NF Light"
+style = "Italic"
+
+[font.normal]
+family = "JetBrainsMonoNL NF Light"
+style = "Regular"
+
+[cursor.style]
+blinking = "Off"
+shape = "Block"
+
+[selection]
+save_to_clipboard = true
+semantic_escape_chars = ",│`|:\"' ()[]{}<>\t"
+
+[scrolling]
+history = 10000
+
+[window]
+decorations = "none"
+dynamic_padding = false
+opacity = 1

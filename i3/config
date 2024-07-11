@@ -33,17 +33,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 # screen before suspend. Use loginctl lock-session to lock your screen.
 exec --no-startup-id xss-lock --transfer-sleep-lock ~/.config/i3/scripts/lock.sh --nofork
 
-# NetworkManager is the most popular way to manage wireless networks on Linux,
-# and nm-applet is a desktop environment-independent system tray GUI for it.
-exec --no-startup-id nm-applet
-
-# Enable touchpad tap to click
-exec_always xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Tapping Enabled" 1
-
-# Enable natural scrolling
-exec_always xinput set-prop "ETPS/2 Elantech Touchpad" "libinput Natural Scrolling Enabled" 1
-
-# Brightness Control
+# ----- Brightness Control -------
 # increase screen brightness
 bindsym XF86MonBrightnessUp exec --no-startup-id light -A 1 
 # decrease screen brightness
@@ -60,7 +50,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec konsole
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -202,5 +192,7 @@ bar {
 
 bindsym $mod+x exec ~/.config/i3/scripts/lock.sh
 
-### bar appearance ###
-for_window [class="^.*"] border pixel 0
+### title bar appearance ###
+new_window pixel 0
+new_float pixel 0
+hide_edge_borders both
