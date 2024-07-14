@@ -1,0 +1,8 @@
+configuration {
+  display-drun: "Applications:";
+  display-window: "Windows:";
+  display-calc: "Calc:";
+  drun-display-format: "{name}";
+  modi: "window,run,drun,calc";
+}
+

@@ -1,1 +1,1 @@
-/home/aliqyanabid/.local/share/omf/themes/slavic-cat/fish_prompt.fish
+/home/aliqyanabid/.local/share/omf/themes/ays/fish_prompt.fish

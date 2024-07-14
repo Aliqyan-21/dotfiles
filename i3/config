@@ -15,8 +15,14 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:monospace 10
 
+# background/wallpaper
+exec_always feh --bg-scale ~/.config/i3/backgrounds/nice-blue-background.png 
+
 # Speed keyboard
 exec_always --no-startup-id xset r rate 250 40
+
+# transparent window/terminal
+exec --no-startup-id picom
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -50,7 +56,7 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec snap run alacritty
+bindsym $mod+Return exec st fish
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -182,13 +188,15 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
-bindsym $mod+r mode "resize"
-
+#---- Status bar ----#
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
+
 bar {
-        status_command i3status -c /home/aliqyanabid/.config/i3status/i3status.conf
+        status_command i3status -c ~/.config/i3status/i3status.conf
 }
+
+#-------------------------------#
 
 bindsym $mod+x exec ~/.config/i3/scripts/lock.sh
 
