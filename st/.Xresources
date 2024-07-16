@@ -1,5 +1,5 @@
 !! Transparency (0-1):
-*.alpha: 0.9
+*.alpha: 0.85
 
 !! Set a default font and font size as below:
 *.font: JetBrainsMonoNL NF Light:size=16
@@ -36,7 +36,8 @@
 *.color15: #ebdbb2
 *.color256: #121212
 *.color257: #ebdbb2
-*.background: #121212 
+! *.background: #121212 
+*.background: #090a04 
 *.foreground: #f9f6ee 
 *.cursorColor: #c1c1c1 
 

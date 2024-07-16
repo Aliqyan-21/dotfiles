@@ -13,10 +13,13 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango:monospace 10
+font pango:monospace 11
+
+# .Xresources refresh
+exec xrdb ~/.config/st/.Xresources
 
 # background/wallpaper
-exec_always feh --bg-scale ~/.config/i3/backgrounds/nice-blue-background.png 
+exec_always feh --bg-scale ~/.config/i3/backgrounds/bg5.png
 
 # Speed keyboard
 exec_always --no-startup-id xset r rate 250 40
@@ -34,6 +37,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
+exec --no-startup-id nm-applet --sm-disable
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -163,7 +167,19 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+## Screenshots
+bindsym Print exec --no-startup-id maim "/home/$USER/Pictures/$(date)"
+bindsym $mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) "/home/$USER/Pictures/$(date)"
+bindsym Shift+Print exec --no-startup-id maim --select "/home/$USER/Pictures/$(date)"
+
+## Clipboard Screenshots
+bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t image/png
+bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
+bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
+
 # resize window (you can also use the mouse for that)
+bindsym $mod+r mode "resize"
+
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
 
@@ -193,7 +209,17 @@ mode "resize" {
 # finds out, if available)
 
 bar {
-        status_command i3status -c ~/.config/i3status/i3status.conf
+  status_command i3status -c ~/.config/i3status/i3status.conf
+
+  colors {
+    background #000000
+    statusline  #faf9f6
+
+    #name              #border    #bg         #text
+  	focused_workspace  #ffffff    #445D48     #faf9f6
+  	active_workspace   #0f1316    #040D12     #faf9f6
+  	inactive_workspace #0f1316    #040D12     #faf9f6
+  }
 }
 
 #-------------------------------#
@@ -204,3 +230,7 @@ bindsym $mod+x exec ~/.config/i3/scripts/lock.sh
 new_window pixel 0
 new_float pixel 0
 hide_edge_borders both
+
+# # gaps
+# gaps inner 2
+# gaps outer 2
