@@ -36,8 +36,8 @@
 *.color15: #ebdbb2
 *.color256: #121212
 *.color257: #ebdbb2
-! *.background: #121212 
 *.background: #090a04 
+! *.background: #08191f 
 *.foreground: #f9f6ee 
 *.cursorColor: #c1c1c1 
 

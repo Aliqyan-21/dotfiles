@@ -19,7 +19,7 @@ font pango:monospace 11
 exec xrdb ~/.config/st/.Xresources
 
 # background/wallpaper
-exec_always feh --bg-scale ~/.config/i3/backgrounds/bg5.png
+exec_always feh --bg-scale ~/.config/i3/backgrounds/zombie.jpg
 
 # Speed keyboard
 exec_always --no-startup-id xset r rate 250 40
@@ -37,7 +37,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
-exec --no-startup-id nm-applet --sm-disable
+# exec --no-startup-id nm-applet --sm-disable --indicator
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
@@ -66,7 +66,7 @@ bindsym $mod+Return exec st fish
 bindsym $mod+Shift+q kill
 
 # start dmenu (a program launcher)
-bindsym $mod+d exec rofi -show run
+bindsym $mod+d exec rofi -show drun
 # A more modern dmenu replacement is rofi:
 # bindcode $mod+40 exec "rofi -modi drun,run -show drun"
 # There also is i3-dmenu-desktop which only displays applications shipping a
