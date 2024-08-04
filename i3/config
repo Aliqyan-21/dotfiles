@@ -231,6 +231,6 @@ new_window pixel 0
 new_float pixel 0
 hide_edge_borders both
 
-# # gaps
-# gaps inner 2
+# gaps
+gaps inner 2
 # gaps outer 2
