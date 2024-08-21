@@ -2,7 +2,8 @@
 *.alpha: 0.85
 
 !! Set a default font and font size as below:
-*.font: JetBrainsMonoNL NF Light:size=16
+*.font: JetBrainsMonoNL NF LIght:size=17
+! *.font: Hack Nerd Font:size=16
 
 *.letterSpace: 0
 *.lineSpace: 10

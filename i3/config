@@ -2,7 +2,6 @@
 # It will not be overwritten, so edit it as you like.
 # Should you change your keyboard layout some time, delete
 # this file and re-run i3-config-wizard(1).
-#
 
 # i3 config file (v4)
 #
@@ -18,7 +17,7 @@ font pango:monospace 11
 exec xrdb ~/.config/st/.Xresources
 
 # background/wallpaper
-exec_always feh --bg-scale ~/.config/i3/backgrounds/firewatch.jpg
+exec_always feh --bg-scale ~/.config/i3/backgrounds/zenforest.jpg
 
 # Speed keyboard
 exec_always --no-startup-id xset r rate 250 40
@@ -192,10 +191,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 10 px or 10 ppt
-        bindsym j resize grow height 10 px or 10 ppt
-        bindsym k resize shrink height 10 px or 10 ppt
-        bindsym l resize grow width 10 px or 10 ppt
+        bindsym h resize shrink width 5 px or 5 ppt
+        bindsym j resize grow height 5 px or 5 ppt
+        bindsym k resize shrink height 5 px or 5 ppt
+        bindsym l resize grow width 5 px or 5 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 10 px or 10 ppt
