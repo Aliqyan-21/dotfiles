@@ -1,0 +1,82 @@
+local wezterm = require("wezterm")
+
+return {
+	-- Existing configurations
+	font = wezterm.font("JetBrainsMonoNL NF Light"),
+	font_size = 16.0,
+	font_antialias = "Subpixel",
+
+	window_background_opacity = 0.80,
+
+	line_height = 1.0,
+	cell_width = 1.0,
+	enable_tab_bar = false,
+	hide_tab_bar_if_only_one_tab = true,
+	window_decorations = "NONE",
+	enable_scroll_bar = false,
+
+	colors = {
+		foreground = "#f9f6ee",
+		background = "#090a04",
+		cursor_bg = "#c1c1c1",
+		cursor_fg = "#090a04",
+		selection_fg = "#f9f6ee",
+		selection_bg = "#3c3836",
+		ansi = {
+			"#1d2021",
+			"#ff3131",
+			"#98971a",
+			"#d79921",
+			"#458588",
+			"#b16286",
+			"#689d6a",
+			"#a89984",
+		},
+		brights = {
+			"#928374",
+			"#fb4934",
+			"#b8bb26",
+			"#fabd2f",
+			"#83a598",
+			"#d3869b",
+			"#8ec07c",
+			"#ebdbb2",
+		},
+	},
+
+	front_end = "OpenGL",
+	max_fps = 60,
+	freetype_load_flags = "NO_HINTING",
+	adjust_window_size_when_changing_font_size = false,
+	scrollback_lines = 1000,
+
+	-- Key bindings to disable unnecessary features
+	keys = {
+		{ key = "Insert", mods = "SHIFT", action = wezterm.action.DisableDefaultAssignment },
+		{ key = "Insert", mods = "CTRL", action = wezterm.action.DisableDefaultAssignment },
+
+		-- Disable split panes
+		{ key = '"', mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
+		{ key = "%", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
+		-- Disable tab creation
+		{ key = "t", mods = "CTRL", action = wezterm.action.DisableDefaultAssignment },
+	},
+
+	-- Cursor blinking rate in milliseconds (0 disables blinking)
+	cursor_blink_rate = 1200,
+
+	-- Cursor style: BlinkingBlock, SteadyBlock, BlinkingUnderline, etc.
+	default_cursor_style = "SteadyBlock",
+
+	-- Remove padding from top and bottom
+	window_padding = {
+		top = 0,
+		bottom = 0,
+		left = 0,
+		right = 0,
+	},
+
+	-- Disable cursor movement acceleration for simplicity
+	-- cursor_blink_ease_in = "Linear",
+	-- cursor_blink_ease_out = "Linear",
+}

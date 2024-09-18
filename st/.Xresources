@@ -1,8 +1,8 @@
 !! Transparency (0-1):
-*.alpha: 0.85
+*.alpha: 0.80
 
 !! Set a default font and font size as below:
-*.font: JetBrainsMonoNL NF LIght:size=17
+*.font: JetBrainsMonoNL NF Light:size=16
 ! *.font: Hack Nerd Font:size=16
 
 *.letterSpace: 0
@@ -63,26 +63,26 @@
 /* *.foreground: #282828 */
 /* st.alpha: 0.9 */
 
-/* !! brogrammer: */
-/* *.foreground:  #d6dbe5 */
-/* *.background:  #131313 */
-/* *.color0:      #1f1f1f */
-/* *.color8:      #d6dbe5 */
-/* *.color1:      #f81118 */
-/* *.color9:      #de352e */
-/* *.color2:      #2dc55e */
-/* *.color10:     #1dd361 */
-/* *.color3:      #ecba0f */
-/* *.color11:     #f3bd09 */
-/* *.color4:      #2a84d2 */
-/* *.color12:     #1081d6 */
-/* *.color5:      #4e5ab7 */
-/* *.color13:     #5350b9 */
-/* *.color6:      #1081d6 */
-/* *.color14:     #0f7ddb */
-/* *.color7:      #d6dbe5 */
-/* *.color15:     #ffffff */
-/* *.colorBD:     #d6dbe5 */
+! !! brogrammer:
+! *.foreground:  #d6dbe5
+! *.background:  #131313
+! *.color0:      #1f1f1f
+! *.color8:      #d6dbe5
+! *.color1:      #f81118
+! *.color9:      #de352e
+! *.color2:      #2dc55e
+! *.color10:     #1dd361
+! *.color3:      #ecba0f
+! *.color11:     #f3bd09
+! *.color4:      #2a84d2
+! *.color12:     #1081d6
+! *.color5:      #4e5ab7
+! *.color13:     #5350b9
+! *.color6:      #1081d6
+! *.color14:     #0f7ddb
+! *.color7:      #d6dbe5
+! *.color15:     #ffffff
+! *.colorBD:     #d6dbe5
 
 /* ! base16 */
 /* *.color0:       #181818 */
