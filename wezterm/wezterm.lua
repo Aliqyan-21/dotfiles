@@ -4,7 +4,6 @@ return {
 	-- Existing configurations
 	font = wezterm.font("JetBrainsMonoNL NF Light"),
 	font_size = 16.0,
-	font_antialias = "Subpixel",
 
 	window_background_opacity = 0.80,
 
@@ -14,6 +13,8 @@ return {
 	hide_tab_bar_if_only_one_tab = true,
 	window_decorations = "NONE",
 	enable_scroll_bar = false,
+
+	window_close_confirmation = "NeverPrompt",
 
 	colors = {
 		foreground = "#f9f6ee",
