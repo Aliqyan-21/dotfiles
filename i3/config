@@ -17,7 +17,7 @@ font pango:monospace 11
 exec xrdb ~/.config/st/.Xresources
 
 # background/wallpaper
-exec_always feh --bg-scale ~/.config/i3/backgrounds/samuraiG.jpg
+exec_always feh --bg-scale ~/.config/i3/backgrounds/paper2.jpg
 
 # Speed keyboard
 exec_always --no-startup-id xset r rate 250 40
@@ -39,7 +39,7 @@ exec --no-startup-id dex-autostart --autostart --environment i3
 
 # xss-lock grabs a logind suspend inhibit lock and will use i3lock to lock the
 # screen before suspend. Use loginctl lock-session to lock your screen.
-exec --no-startup-id xss-lock --transfer-sleep-lock ~/.config/i3/scripts/lock.sh --nofork
+exec --no-startup-id xss-lock --transfer-sleep-lock ~/.config/i3/scripts/lock2.sh --nofork
 
 # ----- Brightness Control -------
 # increase screen brightness
@@ -229,7 +229,7 @@ bar {
 
 #-------------------------------#
 
-bindsym $mod+x exec ~/.config/i3/scripts/lock.sh
+bindsym $mod+x exec ~/.config/i3/scripts/lock2.sh
 
 ### title bar appearance ###
 new_window pixel 0

@@ -3,7 +3,7 @@ local wezterm = require("wezterm")
 return {
 	-- Existing configurations
 	font = wezterm.font("JetBrainsMonoNL NF Light"),
-	font_size = 16.0,
+	font_size = 15.0,
 
 	window_background_opacity = 0.80,
 
@@ -18,7 +18,9 @@ return {
 
 	colors = {
 		foreground = "#f9f6ee",
-		background = "#090a04",
+		-- background = "#090a04",
+		background = "#040709",
+		-- background = "#111",
 		cursor_bg = "#c1c1c1",
 		cursor_fg = "#090a04",
 		selection_fg = "#f9f6ee",
