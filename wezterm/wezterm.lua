@@ -1,11 +1,10 @@
 local wezterm = require("wezterm")
 
 return {
-	-- Existing configurations
 	font = wezterm.font("JetBrainsMonoNL NF Light"),
 	font_size = 15.0,
 
-	window_background_opacity = 0.80,
+	window_background_opacity = 0.60,
 
 	line_height = 1.0,
 	cell_width = 1.0,
@@ -17,26 +16,28 @@ return {
 	window_close_confirmation = "NeverPrompt",
 
 	colors = {
-		foreground = "#f9f6ee",
-		-- background = "#090a04",
+		foreground = "#c0c0c0",
 		background = "#040709",
-		-- background = "#111",
 		cursor_bg = "#c1c1c1",
 		cursor_fg = "#090a04",
-		selection_fg = "#f9f6ee",
-		selection_bg = "#3c3836",
+		cursor_border = "#bdfe58",
+		selection_fg = "#c0c0c0",
+		selection_bg = "#303030",
+		scrollbar_thumb = "#404040",
+
+		-- Map of ANSI color codes to theme colors
 		ansi = {
-			"#1d2021",
+			"#1c1c1c",
 			"#ff3131",
 			"#98971a",
 			"#d79921",
 			"#458588",
 			"#b16286",
-			"#689d6a",
-			"#a89984",
+			"#1bfd9c",
+			"#c0c0c0",
 		},
 		brights = {
-			"#928374",
+			"#585858",
 			"#fb4934",
 			"#b8bb26",
 			"#fabd2f",
@@ -44,6 +45,24 @@ return {
 			"#d3869b",
 			"#8ec07c",
 			"#ebdbb2",
+		},
+
+		-- Additional elements you might want to color
+		visual_bell = "#404040",
+		tab_bar = {
+			background = "#1c1c1c",
+			active_tab = {
+				bg_color = "#303030", -- visual selection color
+				fg_color = "#c0c0c0",
+			},
+			inactive_tab = {
+				bg_color = "#1c1c1c",
+				fg_color = "#585858",
+			},
+			inactive_tab_hover = {
+				bg_color = "#303030",
+				fg_color = "#c0c0c0",
+			},
 		},
 	},
 
@@ -53,33 +72,20 @@ return {
 	adjust_window_size_when_changing_font_size = false,
 	scrollback_lines = 1000,
 
-	-- Key bindings to disable unnecessary features
 	keys = {
 		{ key = "Insert", mods = "SHIFT", action = wezterm.action.DisableDefaultAssignment },
 		{ key = "Insert", mods = "CTRL", action = wezterm.action.DisableDefaultAssignment },
-
-		-- Disable split panes
 		{ key = '"', mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
 		{ key = "%", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
-		-- Disable tab creation
 		{ key = "t", mods = "CTRL", action = wezterm.action.DisableDefaultAssignment },
 	},
 
-	-- Cursor blinking rate in milliseconds (0 disables blinking)
 	cursor_blink_rate = 1200,
-
-	-- Cursor style: BlinkingBlock, SteadyBlock, BlinkingUnderline, etc.
 	default_cursor_style = "SteadyBlock",
-
-	-- Remove padding from top and bottom
 	window_padding = {
 		top = 0,
 		bottom = 0,
 		left = 0,
 		right = 0,
 	},
-
-	-- Disable cursor movement acceleration for simplicity
-	-- cursor_blink_ease_in = "Linear",
-	-- cursor_blink_ease_out = "Linear",
 }
