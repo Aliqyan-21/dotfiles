@@ -17,7 +17,7 @@ font pango:monospace 11
 exec xrdb ~/.config/st/.Xresources
 
 # background/wallpaper
-exec_always feh --bg-scale ~/.config/i3/backgrounds/boatsunset.jpg
+exec_always feh --bg-scale ~/.config/i3/backgrounds/glacier.png
 
 # Speed keyboard
 exec_always --no-startup-id xset r rate 250 40

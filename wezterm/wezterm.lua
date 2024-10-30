@@ -4,7 +4,7 @@ return {
 	font = wezterm.font("JetBrainsMonoNL NF Light"),
 	font_size = 15.0,
 
-	window_background_opacity = 0.60,
+	window_background_opacity = 0.75,
 
 	line_height = 1.0,
 	cell_width = 1.0,
@@ -29,18 +29,19 @@ return {
 		ansi = {
 			"#1c1c1c",
 			"#ff3131",
-			"#98971a",
-			"#d79921",
-			"#458588",
+			"#66b2b2",
+			"#d1d1d1",
+			"#4b8902",
 			"#b16286",
 			"#1bfd9c",
 			"#c0c0c0",
 		},
+
 		brights = {
 			"#585858",
 			"#fb4934",
 			"#b8bb26",
-			"#fabd2f",
+			"#9efd84",
 			"#83a598",
 			"#d3869b",
 			"#8ec07c",
