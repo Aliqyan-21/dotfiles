@@ -67,6 +67,10 @@ bindsym $mod+b exec ~/Downloads/boomer/boomer
 # clipboard manager qlipper
 bindsym $mod+c exec qlipper
 
+# screenkey - display keystrokes 
+bindsym $mod+z exec screenkey -p fixed -g $(slop -n -f '%g')
+bindsym $mod+Shift+z exec killall screenkey
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
