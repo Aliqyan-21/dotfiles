@@ -16,16 +16,17 @@ return {
 	window_close_confirmation = "NeverPrompt",
 
 	colors = {
+		-- darkvoid color scheme base
 		foreground = "#c0c0c0",
 		background = "#040709",
+
 		cursor_bg = "#c1c1c1",
 		cursor_fg = "#090a04",
-		cursor_border = "#bdfe58",
+		cursor_border = "#7fbfff",
 		selection_fg = "#c0c0c0",
 		selection_bg = "#303030",
 		scrollbar_thumb = "#404040",
 
-		-- Map of ANSI color codes to theme colors
 		ansi = {
 			"#1c1c1c",
 			"#ff3131",
@@ -38,7 +39,7 @@ return {
 		},
 
 		brights = {
-			"#585858",
+			"#404040",
 			"#fb4934",
 			"#b8bb26",
 			"#9efd84",
@@ -48,12 +49,11 @@ return {
 			"#ebdbb2",
 		},
 
-		-- Additional elements you might want to color
-		visual_bell = "#404040",
+		visual_bell = "#7fbfff",
 		tab_bar = {
 			background = "#1c1c1c",
 			active_tab = {
-				bg_color = "#303030", -- visual selection color
+				bg_color = "#303030",
 				fg_color = "#c0c0c0",
 			},
 			inactive_tab = {
