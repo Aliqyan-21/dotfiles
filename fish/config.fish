@@ -43,4 +43,4 @@ end
 set -q GHCUP_INSTALL_BASE_PREFIX; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 
 # Set PATH without duplicates
-set -gx PATH /home/aliqyanabid/.ghcup/bin $HOME/.cabal/bin $HOME/.cargo/bin /usr/local/bin /usr/local/sbin /usr/bin /usr/sbin /var/lib/snapd/snap/bin
+set -gx PATH /home/aliqyanabid/go/bin /home/aliqyanabid/.ghcup/bin $HOME/.cabal/bin $HOME/.cargo/bin /usr/local/bin /usr/local/sbin /usr/bin /usr/sbin /var/lib/snapd/snap/bin
