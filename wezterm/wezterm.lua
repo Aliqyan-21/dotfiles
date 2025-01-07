@@ -81,6 +81,8 @@ return {
 		{ key = '"', mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
 		{ key = "%", mods = "CTRL|SHIFT", action = wezterm.action.DisableDefaultAssignment },
 		{ key = "t", mods = "CTRL", action = wezterm.action.DisableDefaultAssignment },
+		-- Add key bindings to reset the zoom level
+		{ key = "0", mods = "CTRL", action = wezterm.action.ResetFontSize },
 	},
 
 	cursor_blink_rate = 1200,
