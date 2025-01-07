@@ -1,10 +1,11 @@
 local wezterm = require("wezterm")
 
 return {
-	font = wezterm.font("JetBrainsMonoNL NF Light"),
-	font_size = 15.0,
+	-- font = wezterm.font("JetBrainsMonoNL NF Light"),
+	font = wezterm.font("Iosevka Term light"),
+	font_size = 16.0,
 
-	window_background_opacity = 0.75,
+	-- window_background_opacity = 0.75,
 
 	line_height = 1.0,
 	cell_width = 1.0,
@@ -18,7 +19,8 @@ return {
 	colors = {
 		-- darkvoid color scheme base
 		foreground = "#c0c0c0",
-		background = "#040709",
+		-- background = "#040709",
+		background = "#1c1c1c",
 
 		cursor_bg = "#c1c1c1",
 		cursor_fg = "#090a04",
