@@ -16,6 +16,8 @@ if status is-interactive
     alias gta='git add'
     alias gtc='git commit'
     alias gtp='git push'
+    alias sd "cd && cd (find * -type d | fzf)"
+    alias openssl-idea='~/.config/scripts/oidea.sh'
     
     set -g theme_color_user ffffff
     set -g theme_color_group 666666

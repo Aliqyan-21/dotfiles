@@ -5,7 +5,7 @@ return {
 	font = wezterm.font("Iosevka Term light"),
 	font_size = 16.0,
 
-	-- window_background_opacity = 0.75,
+	-- window_background_opacity = 0.90,
 
 	line_height = 1.0,
 	cell_width = 1.0,
@@ -22,7 +22,7 @@ return {
 		-- background = "#040709",
 		background = "#1c1c1c",
 
-		cursor_bg = "#c1c1c1",
+		cursor_bg = "#bdfe58",
 		cursor_fg = "#090a04",
 		cursor_border = "#7fbfff",
 		selection_fg = "#c0c0c0",

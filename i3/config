@@ -24,7 +24,7 @@ exec --no-startup-id dunst &
 exec_always ~/.config/scripts/battery_notif.sh
 
 # Speed keyboard
-exec_always --no-startup-id xset r rate 250 40
+exec_always --no-startup-id xset r rate 200 40
 
 # transparent window/terminal
 exec_always --no-startup-id picom
@@ -240,9 +240,9 @@ bar {
 bindsym $mod+x exec ~/.config/i3/scripts/lock2.sh
 
 ### title bar appearance ###
-new_window pixel 0
-new_float pixel 0
-hide_edge_borders both
+# new_window pixel 0
+# new_float pixel 0
+# hide_edge_borders both
 
 # gaps
 smart_gaps on
