@@ -17,7 +17,7 @@ font pango:monospace 11
 exec xrdb ~/.config/st/.Xresources
 
 # background/wallpaper
-exec_always feh --bg-scale ~/.config/i3/backgrounds/glacier.png
+exec_always feh --bg-scale ~/.config/i3/backgrounds/samuraiG.jpg
 
 # battery notif
 exec --no-startup-id dunst &
@@ -240,9 +240,9 @@ bar {
 bindsym $mod+x exec ~/.config/i3/scripts/lock2.sh
 
 ### title bar appearance ###
-# new_window pixel 0
-# new_float pixel 0
-# hide_edge_borders both
+new_window pixel 0
+new_float pixel 0
+hide_edge_borders both
 
 # gaps
 smart_gaps on

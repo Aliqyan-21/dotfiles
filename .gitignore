@@ -1,4 +1,17 @@
+:-/
 Slack/
+startup.log
+yt-x/
+cache/
+zsh/
+zsh/cache/
+filetypesrc
+gsheet/
+local/
+scripts/beep.mp3
+scripts/bit_opener.sh
+scripts/idea_script_ssh.sh
+startup.logSlack/
 binwalk/
 gedit/
 openssl/

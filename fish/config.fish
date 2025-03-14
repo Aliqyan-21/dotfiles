@@ -16,8 +16,17 @@ if status is-interactive
     alias gta='git add'
     alias gtc='git commit'
     alias gtp='git push'
+
     alias sd "cd && cd (find * -type d | fzf)"
+    alias sdh "cd (find * -type d | fzf)"
+    alias sdvi "vim (find * -type f | fzf)"
+
     alias openssl-idea='~/.config/scripts/oidea.sh'
+    alias openssl-ssh='~/.config/scripts/idea_script_ssh.sh'
+    alias bit_opener='~/.config/scripts/bit_opener.sh'
+
+    alias quant_rishik='cd /mnt/aliqyan_hdd/Vicharak/repos/Quantpnr_RisikAnna/'
+    alias vicharak='cd /mnt/aliqyan_hdd/Vicharak'
     
     set -g theme_color_user ffffff
     set -g theme_color_group 666666
@@ -37,3 +46,5 @@ end
 set -q GHCUP_INSTALL_BASE_PREFIX; or set GHCUP_INSTALL_BASE_PREFIX $HOME
 
 set -gx PATH /home/aliqyanabid/go/bin /home/aliqyanabid/.ghcup/bin $HOME/.cabal/bin $HOME/.cargo/bin /usr/local/bin /usr/local/sbin /usr/bin /usr/sbin /var/lib/snapd/snap/bin
+
+set -q GHCUP_INSTALL_BASE_PREFIX[1]; or set GHCUP_INSTALL_BASE_PREFIX $HOME ; set -gx PATH $HOME/.cabal/bin $PATH /home/aliqyanabid/.ghcup/bin # ghcup-env

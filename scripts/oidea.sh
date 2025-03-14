@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ROUTE_KEY="caf3fe5cdbc3e458dc97cc8372c0f962"
-BITSTREAM_KEY="9cee78bbea444e25fbbb359ef46b5bda"  
+BITSTREAM_KEY="36c056ca7dea4e6f5053617be2f91134"  
 IV="9238173e167a284b"
 
 if [ "$#" -ne 3 ]; then
@@ -31,9 +31,7 @@ else
     exit 1
 fi
 
-current_dir=$(pwd)
-
-sudo docker run -it -v "$current_dir:/mnt" openssl-idea enc -idea -d -in /mnt/"$input_file" -out /mnt/"$output_file" -K "$key" -iv "$IV"
+openssl enc -d -idea -in $input_file -out $output_file -K $key -iv $IV -provider legacy
 
 if [ $? -eq 0 ]; then
     echo "Decryption successful! Output saved to: $output_file"
