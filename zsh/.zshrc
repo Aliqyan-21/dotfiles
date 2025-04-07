@@ -1,6 +1,9 @@
 # sudo dnf install zsh-syntax-highlighting
 # sudo dnf install zsh-autosuggestions 
 
+# cursor blink
+echo -ne '\e[1 q'
+
 # loading fpath, necessary to avoid some errors
 fpath=(/usr/share/zsh/site-functions /usr/share/zsh/$ZSH_VERSION/functions $fpath)
 
@@ -28,8 +31,8 @@ zstyle ':completion:*' squeeze-slashes false # Allow /*/ expansion
 # History options
 setopt append_history         # Append to history instead of overwriting
 setopt inc_append_history     # Append history immediately
-setopt share_history          # Share history across sessions
-setopt hist_ignore_dups       # Ignore duplicate commands
+# setopt share_history          # Share history across sessions
+# setopt hist_ignore_dups       # Ignore duplicate commands
 setopt hist_reduce_blanks     # Remove extra blanks from history
 setopt hist_verify            # Verify history expansion before executing
 
@@ -60,10 +63,6 @@ bindkey -v
 # Custom keybinding for jk to escape insert mode 
 bindkey -M viins 'jk' vi-cmd-mode
 
-# No greeting (equivalent to set -g fish_greeting)
-unsetopt PROMPT_SP
-
-# Aliases transferred from fish
 alias vim='nvim'
 alias gts='git status'
 alias gta='git add'
@@ -72,11 +71,15 @@ alias gtp='git push'
 alias sd='cd && cd $(find * -type d | fzf)'
 alias sdh='cd $(find * -type d | fzf)'
 alias sdvi='vim $(find * -type f | fzf)'
+
 alias openssl-idea='~/.config/scripts/oidea.sh'
 alias openssl-ssh='~/.config/scripts/idea_script_ssh.sh'
 alias bit_opener='~/.config/scripts/bit_opener.sh'
 alias quant_rishik='cd /mnt/aliqyan_hdd/Vicharak/repos/Quantpnr_RisikAnna/'
 alias vicharak='cd /mnt/aliqyan_hdd/Vicharak'
+
+alias music='~/.config/scripts/spotube.sh'
+alias cmaker='~/.config/scripts/cmaker.sh'
 
 # PATH setup
 export PATH="$HOME/go/bin:$HOME/.ghcup/bin:$HOME/.cabal/bin:$HOME/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/var/lib/snapd/snap/bin:$PATH"
@@ -95,18 +98,15 @@ setopt prompt_subst
 
 # Enable Git in vcs_info
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git:*' formats '(%b)'              # Default format (no changes)
-zstyle ':vcs_info:git:*' actionformats '(%b|%a)'     # Format during actions (e.g., rebase)
-zstyle ':vcs_info:git:*' formats '(%b%u%c)'          # Format with changes
+zstyle ':vcs_info:git:*' formats '(%b)'         
+zstyle ':vcs_info:git:*' actionformats '(%b|%a)'
+zstyle ':vcs_info:git:*' formats '(%b%u%c)'     
 zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' unstagedstr ' ✗'            # Changed from * to ✗
-zstyle ':vcs_info:git:*' stagedstr ' ✔'              # Changed from + to ✔
+zstyle ':vcs_info:git:*' unstagedstr ' ✗'       
+zstyle ':vcs_info:git:*' stagedstr ' ✔'         
 
 # Set PROMPT
-PROMPT="${NEWLINE}%K{#2E3440}%F{#E5E9F0} %K{#3b4252}%F{#ECEFF4} %n %K{#4c566a} %~ %f%k %F{#88C0D0}\${vcs_info_msg_0_}%f ❯ "
-
-# Set PROMPT
-PROMPT="${NEWLINE}%K{#2E3440}%F{#E5E9F0} %K{#3b4252}%F{#ECEFF4} %n %K{#4c566a} %~ %f%k %F{#88C0D0}\${vcs_info_msg_0_}%f ❯ "
+PROMPT="${NEWLINE}%K{#2E3440}%F{#E5E9F0} %K{#3b4252}%F{#ECEFF4} %n %K{#4c566a} %~ %f%k %F{#88C0D0}\${vcs_info_msg_0_}%f ${NEWLINE}❯ "
 
 # echo -e "${NEWLINE}\033[48;2;46;52;64;38;2;216;222;233m $0 \033[0m\033[48;2;59;66;82;38;2;216;222;233m $(uptime -p | cut -c 4-) \033[0m\033[48;2;76;86;106;38;2;216;222;233m $(uname -r) \033[0m"
 
@@ -116,7 +116,7 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # shows a random quote on startup
 if command -v fortune &> /dev/null && command -v boxes &> /dev/null && command -v lolcat &> /dev/null; then
-  fortune | boxes -d ansi-heavy | lolcat -g 88CCEE:FFDD99 -h 0.1 -v 0.05
+  fortune -s | boxes -d ansi-heavy | lolcat -g 88CCEE:FFDD99 -h 0.1 -v 0.05
 fi
 
 # Custom Ctrl+L to scroll up instead of clearing (soft clear)
@@ -126,3 +126,6 @@ scroll-and-clear() {
 }
 zle -N scroll-and-clear
 bindkey '^L' scroll-and-clear
+
+# for no colors in ls
+LS_COLORS+=':ow=01;33'
