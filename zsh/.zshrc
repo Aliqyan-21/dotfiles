@@ -6,6 +6,7 @@ echo -ne '\e[1 q'
 
 # loading fpath, necessary to avoid some errors
 fpath=(/usr/share/zsh/site-functions /usr/share/zsh/$ZSH_VERSION/functions $fpath)
+PATH="/home/aliqyanabid/.local/bin:$PATH"
 
 zmodload zsh/zutil
 
@@ -61,7 +62,7 @@ HISTFILE="${XDG_CACHE_HOME}/zsh_history"
 # Vi mode setup 
 bindkey -v
 # Custom keybinding for jk to escape insert mode 
-bindkey -M viins 'jk' vi-cmd-mode
+# bindkey -M viins 'jk' vi-cmd-mode
 
 alias vim='nvim'
 alias gts='git status'
@@ -77,9 +78,15 @@ alias openssl-ssh='~/.config/scripts/idea_script_ssh.sh'
 alias bit_opener='~/.config/scripts/bit_opener.sh'
 alias quant_rishik='cd /mnt/aliqyan_hdd/Vicharak/repos/Quantpnr_RisikAnna/'
 alias vicharak='cd /mnt/aliqyan_hdd/Vicharak'
+alias vinuwa='cd /home/aliqyanabid/Vicharak/repos/refact/ViNuwa'
 
 alias music='~/.config/scripts/spotube.sh'
 alias cmaker='~/.config/scripts/cmaker.sh'
+alias eda='~/.config/scripts/eda.sh'
+alias ob='~/.config/scripts/obsidian.sh'
+alias openfpga='~/.config/scripts/openfpga.sh'
+alias efx='source ~/Downloads/efinity/2024.2/bin/setup.sh'
+# alias efx_client='~/.config/scripts/efx_client'
 
 # PATH setup
 export PATH="$HOME/go/bin:$HOME/.ghcup/bin:$HOME/.cabal/bin:$HOME/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/var/lib/snapd/snap/bin:$PATH"
@@ -129,3 +136,6 @@ bindkey '^L' scroll-and-clear
 
 # for no colors in ls
 LS_COLORS+=':ow=01;33'
+
+export VIDOT_EDITOR=gedit
+export VIDOT_TERMINAL=wezterm

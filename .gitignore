@@ -239,3 +239,17 @@ scripts/history_translate.py
 superfile/
 thefuck/
 vim/
+QXmlEdit/
+eDEX-UI/
+goose/
+micro/
+obsidian/
+scripts/assets/efx_client
+scripts/assets/efx_parse
+scripts/assets/efx_ser
+scripts/eda.sh
+scripts/efx_client
+scripts/obsidian.sh
+scripts/openfpga.sh
+xed/
+yai.json

@@ -21,7 +21,7 @@ return {
 		-- darkvoid color scheme base
 		foreground = "#c0c0c0",
 		-- background = "#040709",
-		background = "#1c1c1c",
+		background = "#121212",
 
 		cursor_bg = "#e6eaea",
 		cursor_fg = "#152528",
