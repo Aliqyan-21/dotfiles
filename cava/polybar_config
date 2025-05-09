@@ -1,0 +1,21 @@
+[general]
+bars = 8
+autosens = 1
+overshoot = 20
+sensitivity = 100
+
+[input]
+method = pulse
+source = auto
+
+[output]
+method = raw
+raw_target = /dev/stdout
+data_format = ascii
+ascii_max_range = 7
+ascii_braille = 0
+
+[color]
+gradient = 1
+foreground = '#88b090'
+background = '#121212'
