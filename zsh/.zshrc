@@ -123,7 +123,7 @@ source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # shows a random quote on startup
 if command -v fortune &> /dev/null && command -v boxes &> /dev/null && command -v lolcat &> /dev/null; then
-  fortune -s | boxes -d ansi-heavy | lolcat -g 88CCEE:FFDD99 -h 0.1 -v 0.05
+  fortune -s | lolcat -g 88CCEE:FFDD99 -h 0.1 -v 0.05
 fi
 
 # Custom Ctrl+L to scroll up instead of clearing (soft clear)
