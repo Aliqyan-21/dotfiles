@@ -17,7 +17,7 @@ font pango:monospace 11
 exec xrdb ~/.config/st/.Xresources
 
 # background/wallpaper
-exec_always feh --bg-scale ~/.config/i3/backgrounds/bgirlai.png
+exec_always feh --bg-scale ~/.config/i3/backgrounds/sinister.jpg
 
 # battery notif
 exec --no-startup-id dunst &
@@ -66,7 +66,7 @@ floating_modifier $mod
 bindsym $mod+Return exec wezterm
 
 # boomer - the zooomer
-bindsym $mod+b exec ~/Downloads/boomer/boomer
+bindsym $mod+b exec ~/Downloads/softwares/boomer/boomer
 
 # clipboard manager qlipper
 bindsym $mod+c exec qlipper

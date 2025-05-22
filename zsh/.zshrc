@@ -86,6 +86,8 @@ alias eda='~/.config/scripts/eda.sh'
 alias ob='~/.config/scripts/obsidian.sh'
 alias openfpga='~/.config/scripts/openfpga.sh'
 alias efx='source ~/Downloads/efinity/2024.2/bin/setup.sh'
+alias t120_posi='cp /usr/local/bin/posi_bcram .'
+alias t4_posi='cp /usr/local/bin/blank.db ./posi_bcram'
 # alias efx_client='~/.config/scripts/efx_client'
 
 # PATH setup
