@@ -73,6 +73,7 @@ alias sd='cd && cd $(find * -type d | fzf)'
 alias sdh='cd $(find * -type d | fzf)'
 alias sdvi='vim $(find * -type f | fzf)'
 alias rain='~/.config/scripts/rain.sh'
+alias sgit='~/.config/scripts/sgit.sh'
 
 alias openssl-idea='~/.config/scripts/oidea.sh'
 alias openssl-ssh='~/.config/scripts/idea_script_ssh.sh'
@@ -142,3 +143,11 @@ LS_COLORS+=':ow=01;33'
 
 export VIDOT_EDITOR=gedit
 export VIDOT_TERMINAL=wezterm
+
+# Start ssh-agent if not running
+if ! pgrep -u "$USER" ssh-agent > /dev/null; then
+    ssh-agent > ~/.ssh-agent-thing
+fi
+if [[ "$SSH_AGENT_PID" == "" ]]; then
+    eval "$(<~/.ssh-agent-thing)"
+fi
