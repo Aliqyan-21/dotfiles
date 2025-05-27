@@ -6,7 +6,7 @@ return {
 	font = wezterm.font("Operator Mono Lig Book"),
 	font_size = 14.0,
 
-	window_background_opacity = 0.80,
+	window_background_opacity = 0.85,
 
 	line_height = 1.0,
 	cell_width = 1.0,

@@ -72,6 +72,7 @@ alias gtp='git push'
 alias sd='cd && cd $(find * -type d | fzf)'
 alias sdh='cd $(find * -type d | fzf)'
 alias sdvi='vim $(find * -type f | fzf)'
+alias rain='~/.config/scripts/rain.sh'
 
 alias openssl-idea='~/.config/scripts/oidea.sh'
 alias openssl-ssh='~/.config/scripts/idea_script_ssh.sh'
