@@ -1,2 +1,32 @@
 [Global plugin config]
 manageProfile=false
+
+[SSH Config][darkvoid]
+hostname=darkvoid.local
+identifier=darkvoid
+importedFromSshConfig=true
+port=
+profileName=
+sshkey=
+useSshConfig=true
+username=vicharak
+
+[SSH Config][galactos]
+hostname=galactos.local
+identifier=galactos
+importedFromSshConfig=true
+port=
+profileName=Profile 1
+sshkey=
+useSshConfig=true
+username=aliqyan
+
+[SSH Config][onnx]
+hostname=onnx.local
+identifier=onnx
+importedFromSshConfig=true
+port=
+profileName=Profile 1
+sshkey=
+useSshConfig=true
+username=vicharak
