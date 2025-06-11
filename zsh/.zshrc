@@ -98,7 +98,6 @@ export PATH="$HOME/go/bin:$HOME/.ghcup/bin:$HOME/.cabal/bin:$HOME/.cargo/bin:/us
 # GHCUP setup
 export GHCUP_INSTALL_BASE_PREFIX="${GHCUP_INSTALL_BASE_PREFIX:-$HOME}"
 
-# set up prompt
 NEWLINE=$'\n'
 
 # Load vcs_info for Git status
@@ -107,19 +106,15 @@ precmd_vcs_info() { vcs_info }
 precmd_functions+=( precmd_vcs_info )
 setopt prompt_subst
 
-# Enable Git in vcs_info
+# git configuration
 zstyle ':vcs_info:*' enable git
-zstyle ':vcs_info:git:*' formats '(%b)'         
-zstyle ':vcs_info:git:*' actionformats '(%b|%a)'
-zstyle ':vcs_info:git:*' formats '(%b%u%c)'     
+zstyle ':vcs_info:git:*' formats ' %F{#6e6a86}│%f %F{#ebbcba}%b%f%F{#6e6a86}%u%c%f'
+zstyle ':vcs_info:git:*' actionformats ' %F{#6e6a86}│%f %F{#ebbcba}%b%f %F{#6e6a86}:%f %F{#f6c177}%a%f%F{#6e6a86}%u%c%f'
 zstyle ':vcs_info:git:*' check-for-changes true
-zstyle ':vcs_info:git:*' unstagedstr ' ✗'       
-zstyle ':vcs_info:git:*' stagedstr ' ✔'         
+zstyle ':vcs_info:git:*' unstagedstr ' %F{#eb6f92}✗%f'
+zstyle ':vcs_info:git:*' stagedstr ' %F{#9ccfd8}✓%f'
 
-# Set PROMPT
-PROMPT="${NEWLINE}%K{#2E3440}%F{#E5E9F0} %K{#3b4252}%F{#ECEFF4} %n %K{#4c566a} %~ %f%k %F{#88C0D0}\${vcs_info_msg_0_}%f ${NEWLINE}❯ "
-
-# echo -e "${NEWLINE}\033[48;2;46;52;64;38;2;216;222;233m $0 \033[0m\033[48;2;59;66;82;38;2;216;222;233m $(uptime -p | cut -c 4-) \033[0m\033[48;2;76;86;106;38;2;216;222;233m $(uname -r) \033[0m"
+PROMPT='%F{#6e6a86}╭─%f %F{#e0def4}%n%f %F{#6e6a86}at%f %F{#c4a7e7}%~%f${vcs_info_msg_0_}${NEWLINE}%F{#6e6a86}╰─%f %F{#9ccfd8}❯%f '
 
 # sourcing plugins
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
