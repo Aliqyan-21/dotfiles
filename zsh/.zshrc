@@ -1,12 +1,10 @@
 # sudo dnf install zsh-syntax-highlighting
 # sudo dnf install zsh-autosuggestions 
 
-# cursor blink
-echo -ne '\e[1 q'
-
 # loading fpath, necessary to avoid some errors
 fpath=(/usr/share/zsh/site-functions /usr/share/zsh/$ZSH_VERSION/functions $fpath)
 PATH="/home/aliqyanabid/.local/bin:$PATH"
+export PATH="/home/aliqyanabid/.nimble/bin:$PATH"
 
 zmodload zsh/zutil
 
@@ -55,7 +53,7 @@ stty stop undef               # Disable accidental Ctrl+S
 mkdir -p ${XDG_CACHE_HOME}
 
 # History settings
-HISTSIZE=10000
+HISTSIZE=20000
 SAVEHIST=10000
 HISTFILE="${XDG_CACHE_HOME}/zsh_history"
 
@@ -90,6 +88,7 @@ alias openfpga='~/.config/scripts/openfpga.sh'
 alias efx='source ~/Downloads/efinity/2024.2/bin/setup.sh'
 alias t120_posi='cp /usr/local/bin/posi_bcram .'
 alias t4_posi='cp /usr/local/bin/blank.db ./posi_bcram'
+alias t120_arch='vim /mnt/aliqyan_hdd/Vicharak/repos/Quantpnr_RisikAnna/arch_exp/tiles/arch_oph_337x642_b33_d10.xml'
 # alias efx_client='~/.config/scripts/efx_client'
 
 # PATH setup
@@ -120,10 +119,10 @@ PROMPT='%F{#6e6a86}╭─%f %F{#e0def4}%n%f %F{#6e6a86}at%f %F{#c4a7e7}%~%f${vcs
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
-# shows a random quote on startup
-if command -v fortune &> /dev/null && command -v boxes &> /dev/null && command -v lolcat &> /dev/null; then
-  fortune -s | lolcat -g 88CCEE:FFDD99 -h 0.1 -v 0.05
-fi
+# # shows a random quote on startup
+# if command -v fortune &> /dev/null && command -v boxes &> /dev/null && command -v lolcat &> /dev/null; then
+#   fortune -s | lolcat -g 88CCEE:FFDD99 -h 0.1 -v 0.05
+# fi
 
 # Custom Ctrl+L to scroll up instead of clearing (soft clear)
 scroll-and-clear() {
@@ -145,4 +144,15 @@ if ! pgrep -u "$USER" ssh-agent > /dev/null; then
 fi
 if [[ "$SSH_AGENT_PID" == "" ]]; then
     eval "$(<~/.ssh-agent-thing)"
+fi
+
+export FPCDIR='/usr/local/share/fpcsrc'
+export PP='/usr/bin/fpc'
+alias boom='echo boom baam vada pav'
+
+# fnm
+FNM_PATH="/home/aliqyanabid/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "`fnm env`"
 fi
