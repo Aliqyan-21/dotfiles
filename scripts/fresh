@@ -1,0 +1,27 @@
+#!/bin/bash
+
+API_KEY_FILE="$HOME/.config/fresh/api_key.txt"
+API_KEY=$(<"$API_KEY_FILE")
+
+if [ $# -eq 0 ]; then
+  echo "Usage: fresh <search terms>"
+  exit 1
+fi
+
+query="$*"
+echo "Searching for a random image of: $query"
+
+# This now correctly uses $API_KEY
+response=$(curl -s -H "Authorization: $API_KEY" \
+  "https://api.pexels.com/v1/search?query=${query// /+}&per_page=15")
+
+mapfile -t urls < <(echo "$response" | jq -r '.photos[].src.original')
+
+if [ ${#urls[@]} -eq 0 ]; then
+  echo "No images found for '$query'."
+  exit 1
+fi
+
+index=$(( RANDOM % ${#urls[@]} ))
+img_url="${urls[$index]}"
+feh -F --insecure "$img_url"
