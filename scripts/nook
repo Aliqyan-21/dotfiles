@@ -1,0 +1,24 @@
+#!/bin/bash
+
+if [ $# -ne 1 ]; then
+  echo "|===============================================================|"
+  echo "| nook := a script that opens pdf files using okular but with   |";
+  echo "| using nohup and &, so that it does not gets attached to the   |";
+  echo "| terminal. So that you can open any pdf without worrying about |";
+  echo "| closing okular when the running terminal instance gets killed |";
+  echo "|===============================================================|"
+  echo
+  echo "usage: nook <pdf file>";
+  echo "To close okular:";
+  echo "usage: nook -close";
+  exit 1
+fi
+
+pdf_file=$1
+
+if [ $pdf_file == "-close" ]; then
+  killall okular
+else
+nohup okular $pdf_file > /dev/null 2>&1 &
+rm -f nohup.out
+fi

@@ -73,6 +73,7 @@ alias sdvi='vim $(find * -type f | fzf)'
 alias rain='~/.config/scripts/rain.sh'
 alias sgit='~/.config/scripts/sgit.sh'
 alias fresh='~/.config/scripts/fresh'
+alias nook='~/.config/scripts/nook'
 
 alias openssl-idea='~/.config/scripts/oidea.sh'
 alias openssl-ssh='~/.config/scripts/idea_script_ssh.sh'
