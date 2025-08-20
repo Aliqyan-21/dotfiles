@@ -3,8 +3,8 @@ local wezterm = require("wezterm")
 return {
 	-- font = wezterm.font("JetBrainsMonoNL NF Light"),
 	-- font = wezterm.font("Iosevka Term medium"),
-	font = wezterm.font("Pixel Code Light"),
-	font_size = 14.0,
+	font = wezterm.font("scientifica"),
+	font_size = 18.0,
 
 	window_background_opacity = 0.85,
 
