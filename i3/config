@@ -17,7 +17,7 @@ font pango:monospace 11
 exec xrdb ~/.config/st/.Xresources
 
 # background/wallpaper
-exec_always feh --bg-scale ~/.config/i3/backgrounds/oneos.jpg
+exec_always feh --bg-center ~/.config/i3/backgrounds/tsoding4
 
 # battery notif
 exec --no-startup-id dunst &
