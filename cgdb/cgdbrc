@@ -1,0 +1,11 @@
+set autosourcereload
+set color
+set debugwincolor
+set executinglinedisplay=shortarrow
+set scrollbackbuffersize=5000
+set selectedlinedisplay=longarrow
+set showdebugcommands=off
+set tabstop=2
+set winsplit=even
+set wrapscan=off
+set syntax

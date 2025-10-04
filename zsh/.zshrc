@@ -141,6 +141,7 @@ LS_COLORS+=':ow=01;33'
 export VIDOT_EDITOR=gedit
 export VIDOT_TERMINAL=wezterm
 
+
 # Start ssh-agent if not running
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
     ssh-agent > ~/.ssh-agent-thing
@@ -149,9 +150,13 @@ if [[ "$SSH_AGENT_PID" == "" ]]; then
     eval "$(<~/.ssh-agent-thing)"
 fi
 
+
 export FPCDIR='/usr/local/share/fpcsrc'
 export PP='/usr/bin/fpc'
 alias boom='echo boom baam vada pav'
+
+#cgdb
+export CGDB_DIR=/home/aliqyanabid/.config/cgdb/
 
 # fnm
 FNM_PATH="/home/aliqyanabid/.local/share/fnm"
