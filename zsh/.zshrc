@@ -92,7 +92,9 @@ alias efx='source ~/Downloads/efinity/2024.2/bin/setup.sh'
 alias t120_posi='cp /usr/local/bin/posi_bcram .'
 alias t4_posi='cp /usr/local/bin/blank.db ./posi_bcram'
 alias t120_arch='vim /mnt/aliqyan_hdd/Vicharak/repos/Quantpnr_RisikAnna/arch_exp/tiles/arch_oph_337x642_b33_d10.xml'
-# alias efx_client='~/.config/scripts/efx_client'
+alias 2025='echo "Year of @Aliqyan-21"'
+alias i3break='~/.config/i3/scripts/i3break.sh'
+alias dp='~/Vicharak/repos/quantpnr_red/diff_parser'
 
 # PATH setup
 export PATH="$HOME/go/bin:$HOME/.ghcup/bin:$HOME/.cabal/bin:$HOME/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/var/lib/snapd/snap/bin:$PATH"
@@ -142,14 +144,17 @@ export VIDOT_EDITOR=gedit
 export VIDOT_TERMINAL=wezterm
 
 
-# Start ssh-agent if not running
+# Start ssh-agent and load its environment variables if not already running
 if ! pgrep -u "$USER" ssh-agent > /dev/null; then
-    ssh-agent > ~/.ssh-agent-thing
-fi
-if [[ "$SSH_AGENT_PID" == "" ]]; then
-    eval "$(<~/.ssh-agent-thing)"
+    ssh-agent >! ~/.ssh-agent-thing
 fi
 
+# Load the agent environment variables if the file exists and the variables aren't set
+if [ -f ~/.ssh-agent-thing ] && [ -z "$SSH_AGENT_PID" ]; then
+    # The 'source' command is safer than 'eval "$(<file)"' for this purpose.
+    # It also ensures that the file is not empty before reading it.
+    source ~/.ssh-agent-thing > /dev/null
+fi
 
 export FPCDIR='/usr/local/share/fpcsrc'
 export PP='/usr/bin/fpc'

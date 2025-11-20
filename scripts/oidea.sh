@@ -1,7 +1,7 @@
 #!/bin/bash
 
 ROUTE_KEY="caf3fe5cdbc3e458dc97cc8372c0f962"
-BITSTREAM_KEY="36c056ca7dea4e6f5053617be2f91134"  
+BITSTREAM_KEY="0744cd191361b653bda024a338798d6c"  
 IV="9238173e167a284b"
 
 if [ "$#" -ne 3 ]; then

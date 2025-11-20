@@ -1,3 +1,7 @@
+rpcs3/
+scripts/assets/key
+scripts/ttimer.sh
+cgdb/logs
 EDRLab.ThoriumReader/
 koodo-reader/
 calibre/
