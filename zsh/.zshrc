@@ -123,6 +123,7 @@ PROMPT='%F{#6e6a86}╭─%f %F{#e0def4}%n%f %F{#6e6a86}at%f %F{#c4a7e7}%~%f${vcs
 # sourcing plugins
 source /usr/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh-vi-man/.zsh-vi-man/zsh-vi-man.plugin.zsh
 
 # # shows a random quote on startup
 # if command -v fortune &> /dev/null && command -v boxes &> /dev/null && command -v lolcat &> /dev/null; then

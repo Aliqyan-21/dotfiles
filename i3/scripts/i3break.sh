@@ -8,14 +8,11 @@ fi
 
 MINUTES=$1
 
-# Calculate the return time
 RETURN_TIME=$(date -d "+${MINUTES} minutes" +"%I:%M %p")
 
-# Get screen dimensions
 screen_width=$(xdpyinfo | awk '/dimensions:/ {print $2}' | cut -d'x' -f1)
 screen_height=$(xdpyinfo | awk '/dimensions:/ {print $2}' | cut -d'x' -f2)
 
-# Create a blurred screenshot with nice text
 scrot /tmp/screen.png
 
 magick /tmp/screen.png -blur 0x8 \
@@ -34,11 +31,9 @@ magick /tmp/screen.png -blur 0x8 \
     -fill white \
     -stroke black \
     -strokewidth 2 \
-    -annotate +0+150 "🔒" \
+    -annotate +0+150 "" \
     /tmp/screen_text.png
 
-# Lock with the image
 i3lock -i /tmp/screen_text.png
 
-# Clean up
 rm /tmp/screen.png /tmp/screen_text.png
