@@ -37,7 +37,7 @@ setopt hist_verify            # Verify history expansion before executing
 
 # General options
 setopt auto_menu              # Show completion menu automatically
-setopt menu_complete          # Autocomplete first match
+unsetopt menu_complete          # Autocomplete first match
 setopt autocd                 # Type directory name to cd
 setopt auto_param_slash       # Add trailing slash for directories
 setopt no_case_glob           # Case-insensitive globbing
@@ -75,6 +75,8 @@ alias rain='~/.config/scripts/rain.sh'
 alias sgit='~/.config/scripts/sgit.sh'
 alias fresh='~/.config/scripts/fresh'
 alias nook='~/.config/scripts/nook'
+alias aoc='~/.config/scripts/aoc.sh'
+alias lalit='speak-ng "lalit is a noob"'
 
 alias openssl-idea='~/.config/scripts/oidea.sh'
 alias openssl-ssh='~/.config/scripts/idea_script_ssh.sh'
@@ -92,7 +94,7 @@ alias efx='source ~/Downloads/efinity/2024.2/bin/setup.sh'
 alias t120_posi='cp /usr/local/bin/posi_bcram .'
 alias t4_posi='cp /usr/local/bin/blank.db ./posi_bcram'
 alias t120_arch='vim /mnt/aliqyan_hdd/Vicharak/repos/Quantpnr_RisikAnna/arch_exp/tiles/arch_oph_337x642_b33_d10.xml'
-alias 2025='echo "Year of @Aliqyan-21"'
+alias 2026='echo "Year of @Aliqyan-21"'
 alias i3break='~/.config/i3/scripts/i3break.sh'
 alias dp='~/Vicharak/repos/quantpnr_red/diff_parser'
 
