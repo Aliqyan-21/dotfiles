@@ -101,7 +101,7 @@ alias i3break='~/.config/i3/scripts/i3break.sh'
 alias dp='~/Vicharak/repos/quantpnr_red/diff_parser'
 
 # PATH setup
-export PATH="$HOME/go/bin:$HOME/.ghcup/bin:$HOME/.cabal/bin:$HOME/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/var/lib/snapd/snap/bin:$PATH"
+export PATH="/usr/local/go/bin:$HOME/go/bin:$HOME/.ghcup/bin:$HOME/.cabal/bin:$HOME/.cargo/bin:/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/var/lib/snapd/snap/bin:$PATH"
 
 # GHCUP setup
 export GHCUP_INSTALL_BASE_PREFIX="${GHCUP_INSTALL_BASE_PREFIX:-$HOME}"
