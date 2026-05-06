@@ -79,6 +79,7 @@ alias aoc='~/.config/scripts/aoc.sh'
 alias qaf='cd /mnt/aliqyan_hdd/Vicharak/repos/qaf'
 alias sims='cd ~/Vicharak/repos/quantpnr_red/diff_parser/sim_models'
 
+alias ossl='~/.config/scripts/enc_dec.sh'
 alias openssl-idea='~/.config/scripts/oidea.sh'
 alias openssl-ssh='~/.config/scripts/idea_script_ssh.sh'
 alias bit_opener='~/.config/scripts/bit_opener.sh'
@@ -86,6 +87,8 @@ alias quant_rishik='cd /mnt/aliqyan_hdd/Vicharak/repos/Quantpnr_RisikAnna/'
 alias vicharak='cd /mnt/aliqyan_hdd/Vicharak'
 alias vinuwa='cd /home/aliqyanabid/Vicharak/repos/refact/ViNuwa'
 alias ghrep='~/.config/scripts/ghrep.sh'
+alias ff='rlwrap -i -f ~/Downloads/dev_tools/factor/factor_words.txt factor -run=listener'
+alias run_pgm='~/.config/scripts/run_pgm.sh'
 
 alias music='~/.config/scripts/spotube.sh'
 alias cmaker='~/.config/scripts/cmaker.sh'
@@ -174,3 +177,7 @@ if [ -d "$FNM_PATH" ]; then
   export PATH="$FNM_PATH:$PATH"
   eval "`fnm env`"
 fi
+
+efin() {
+  cd ~/Downloads/efinity/$1
+}

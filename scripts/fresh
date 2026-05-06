@@ -11,7 +11,6 @@ fi
 query="$*"
 echo "Searching for a random image of: $query"
 
-# This now correctly uses $API_KEY
 response=$(curl -s -H "Authorization: $API_KEY" \
   "https://api.pexels.com/v1/search?query=${query// /+}&per_page=15")
 
