@@ -26,7 +26,7 @@ magick /tmp/screen.png -blur 0x8 \
     -fill "#8be9fd" \
     -stroke "#282a36" \
     -strokewidth 4 \
-    -annotate +0+50 "Will be Back by ${RETURN_TIME}" \
+    -annotate +0+50 "LUNCHEON back by ${RETURN_TIME}" \
     -pointsize 40 \
     -fill white \
     -stroke black \

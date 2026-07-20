@@ -1,0 +1,17 @@
+# Load vcs_info for Git status
+autoload -Uz vcs_info
+precmd_vcs_info() { vcs_info }
+precmd_functions+=( precmd_vcs_info )
+setopt prompt_subst
+
+# Enable Git in vcs_info
+zstyle ':vcs_info:*' enable git
+zstyle ':vcs_info:git:*' formats '(%b)'         
+zstyle ':vcs_info:git:*' actionformats '(%b|%a)'
+zstyle ':vcs_info:git:*' formats '(%b%u%c)'     
+zstyle ':vcs_info:git:*' check-for-changes true
+zstyle ':vcs_info:git:*' unstagedstr ' ✗'       
+zstyle ':vcs_info:git:*' stagedstr ' ✔'         
+
+# Set PROMPT
+PROMPT="${NEWLINE}%K{#2E3440}%F{#E5E9F0} %K{#3b4252}%F{#ECEFF4} %n %K{#4c566a} %~ %f%k %F{#88C0D0}\${vcs_info_msg_0_}%f ${NEWLINE}❯ "

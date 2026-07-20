@@ -1,0 +1,24 @@
+{
+  "workspaceMode": "local",
+  "vaultRoot": "/home/aliqyanabid/College/me/notes",
+  "localVaults": [
+    {
+      "root": "/home/aliqyanabid/College/me/notes",
+      "name": "notes",
+      "lastOpenedAt": 1781331681219
+    }
+  ],
+  "remoteWorkspace": null,
+  "remoteWorkspaceProfileId": null,
+  "remoteWorkspaceProfiles": [],
+  "windowState": {
+    "x": 0,
+    "y": 26,
+    "width": 1920,
+    "height": 1028,
+    "isMaximized": true
+  },
+  "zoomFactor": 1,
+  "quickCaptureHotkey": "CommandOrControl+Shift+Space",
+  "quickCapturePinned": false
+}

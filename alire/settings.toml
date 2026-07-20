@@ -1,0 +1,13 @@
+[index]
+last_update = 281725875
+[toolchain]
+assistant = false
+[toolchain.external]
+gnat = false
+gprbuild = false
+[toolchain.use]
+gnat = "gnat_native=15.2.1"
+gprbuild = "gprbuild=26.0.1"
+[user]
+name = "aliqyan"
+
